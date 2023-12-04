@@ -133,6 +133,96 @@ insert Conclusion here
 -	Mentens, J., Raes, D. and Hermy, M. (2006) <i><a href="https://www.sciencedirect.com/science/article/pii/S0169204605000496">‘Green roofs as a tool for solving the rainwater runoff problem in the urbanized 21st century?’</a>, Landscape and Urban Planning</i>, 77(3), pp. 217–226. doi:10.1016/j.landurbplan.2005.02.010.  
 </pre>
 <hr>
+
+  <script>
+  var slideImages = ["Slide1.JPG", "Slide2.JPG", "Slide3.JPG", "Slide4.JPG", "Slide5.JPG"];
+  var currentSlide = 0;
+
+  function showSlide() {
+    document.getElementById('slide').src = slideImages[currentSlide];
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slideImages.length;
+    showSlide();
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slideImages.length) % slideImages.length;
+    showSlide();
+  }
+
+  function showSlideNumber(slideNumber) {
+    currentSlide = slideNumber - 1;
+    showSlide();
+  }
+
+  showSlide();
+</script>
+
+
+
+
+        <div id="slide-container">
+              <img id="slide" src="Slide1.JPG" alt="Slide 1" style="width:100%; max-width:800px;">
+
+              <!-- Previous and Next buttons container -->
+              <div class="button-container">
+                    <button class="button" onclick="prevSlide()">Previous</button>
+                    <button class="button" onclick="nextSlide()">Next</button>
+              </div>
+
+              <!-- Slide number buttons container -->
+              <div class="slide-number-container">
+                    <button class="button" onclick="showSlideNumber(1)">1</button>
+                     <button class="button" onclick="showSlideNumber(2)">2</button>
+                     <button class="button" onclick="showSlideNumber(3)">3</button>
+                     <button class="button" onclick="showSlideNumber(4)">4</button>
+                     <button class="button" onclick="showSlideNumber(5)">5</button>
+              </div>
+              <style>
+                    /* Style to center the image*/
+                    #slide-container {
+                          text-align: center;
+                          position: relative;
+                    }
+
+                    /* Style for the buttons */
+                    .button-container {
+                          position: absolute;
+                          bottom: 0;
+                          left: 50%;
+                          transform: translateX(-50%);
+                          margin-bottom: -100x; /* Add some margin between the image and buttons */
+                    }
+
+                    .button {
+                          padding: 10px 20px;
+                          background-color: #4CAF50;
+                          color: white;
+                          border: none;
+                          border-radius: 5px;
+                          font-size: 16px;
+                          cursor: pointer;
+                          margin: 0 5px; /* Add some margin between the buttons */
+                    }
+
+                    .slide-number-container {
+                          position: absolute;
+                          bottom: 0;
+                          left: 50%;
+                          transform: translateX(-50%);
+                          margin-bottom: -50px; /* Add some margin between the slide number buttons and the image */
+                    }
+
+                    </style>
+   
+ 
+   <script>
+    const d = new Date ();
+    document.getElementById("data&time").innerHTML = d;
+ 
+  </script>
   <p id="date&time"></p>
   <script>
 
